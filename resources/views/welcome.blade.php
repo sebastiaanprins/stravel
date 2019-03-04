@@ -86,6 +86,7 @@
 
                 <div class="links">
                     <a href="/countries">Countries</a>
+                    <a href="/languages">Languages</a>
                     <a href="https://laravel.com/docs">Laravel Documentation</a>
 
                     {{-- <a href="https://laracasts.com">Laracasts</a>

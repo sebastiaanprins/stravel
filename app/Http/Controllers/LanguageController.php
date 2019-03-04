@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Country;
 use App\Language;
 use Illuminate\Http\Request;
 
-class CountryController extends Controller
+class LanguageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,8 @@ class CountryController extends Controller
      */
     public function index()
     {
-        $countries = Country::all();
-        return view('countries.index', compact('countries'));
+        $languages = Language::all();
+        return view('languages.index', compact('languages'));
     }
 
     /**
@@ -24,19 +23,9 @@ class CountryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create()
     {
-        // Create country & assign language
-        $country = new Country;
-        $country->countryName = 'Canada';
-
-        $country->save();
-
-        $language = Language::find([1, 2]);
-        $country->languages()->attach($language);
-
-        return 'Success';
-
+        //
     }
 
     /**
@@ -53,10 +42,10 @@ class CountryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Country  $country
+     * @param  \App\Language  $language
      * @return \Illuminate\Http\Response
      */
-    public function show(Country $country)
+    public function show(Language $language)
     {
         //
     }
@@ -64,10 +53,10 @@ class CountryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Country  $country
+     * @param  \App\Language  $language
      * @return \Illuminate\Http\Response
      */
-    public function edit(Country $country)
+    public function edit(Language $language)
     {
         //
     }
@@ -76,10 +65,10 @@ class CountryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Country  $country
+     * @param  \App\Language  $language
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Country $country)
+    public function update(Request $request, Language $language)
     {
         //
     }
@@ -87,10 +76,10 @@ class CountryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Country  $country
+     * @param  \App\Language  $language
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Country $country)
+    public function destroy(Language $language)
     {
         //
     }

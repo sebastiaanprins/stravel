@@ -11,12 +11,13 @@ class CountryTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('countries')->insert([
-            ['countryName' => 'Belgium',],
-            ['countryName' => 'France',],
-            ['countryName' => 'Germany',],
-            ['countryName' => 'Spain',],
-            ['countryName' => 'Italy',],
-        ]);
+        // DB::table('countries')->insert([
+        //     ['countryName' => 'Canada',],
+        //     ['countryName' => 'Belgium',],
+        //     ['countryName' => 'Curacao',],
+        //     ['countryName' => 'Spain',],
+        //     ['countryName' => 'Mexico',],
+        //     ['countryName' => 'England',],
+        // ]);
     }
 }
