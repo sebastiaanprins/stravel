@@ -15,6 +15,7 @@
 
   <table class="table table-striped">
       <a href="/"> <button type="button" class="btn btn-secondary">Home</button></a>
+      <a href="/countries"> <button type="button" class="btn btn-secondary">Countries</button></a>
     <thead>
         <tr>
           <td>ID:</td>
