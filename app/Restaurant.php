@@ -9,6 +9,9 @@ class Restaurant extends Model
     //
     protected $fillable = [
         'restName',
-        'restLocation'
+        'restKitchen',
+        'restLocation',
+        'restCity',
+        'restWebsite',
     ];
 }

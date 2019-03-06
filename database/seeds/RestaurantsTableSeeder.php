@@ -14,16 +14,31 @@ class RestaurantsTableSeeder extends Seeder
         //
         DB::table('restaurants')->insert(
         [
-            ['restName' => "Tonino's",
-            'restLocation' => 'Bad Bentheim, Germany'],
-            
-            ['restName' => "Pier 99",
-            'restLocation' => 'xxx, Germany'],
-            
-            ['restName' => "Else am See",
-            'restLocation' => 'yyy, Germany']
+            [
+            'restName' => "Tonino's",
+            'restKitchen' => 'Mediterranean',
+            'restLocation' => 'Gildehauser Str. 27',
+            'restCity' => 'Bad Bentheim',
+            'restWebsite' => 'www.hotelristorantetonino.de',
+            ],
 
-            ]);
-        
+            [
+            'restName' => 'Pier99',
+            'restKitchen' => 'Mediterranean, diverse',
+            'restLocation' => 'Heseper Weg 40',
+            'restCity' => 'Nordhorn',
+            'restWebsite' => 'www.pier99.de',
+            ],
+
+            [
+            'restName' => 'Else am See',
+            'restKitchen' => 'Mediterranean',
+            'restLocation' => 'Drievordener Straße 95',
+            'restCity' => 'Schüttorf',
+            'restWebsite' => 'elseamsee.de',
+            ],
+
+        ]);
+
     }
 }

@@ -17,8 +17,10 @@ class CreateRestaurantsTable extends Migration
             $table->increments('id');
 
             $table->string('restName');
+            $table->string('restKitchen');
             $table->string('restLocation');
-
+            $table->string('restCity');
+            $table->string('restWebsite');
 
             $table->timestamps();
         });

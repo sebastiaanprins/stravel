@@ -17,17 +17,23 @@
       <a href="/"> <button type="button" class="btn btn-secondary">Home</button></a>
     <thead>
         <tr>
-          <td>ID</td>
+          {{-- <td>ID</td> --}}
           <td>Restaurant</td>
-          <td>Place</td>
+          <td>Kitchen</td>
+          <td>Address</td>
+          <td>City</td>
+          <td>Website</td>
         </tr>
     </thead>
     <tbody>
         @foreach($restaurants as $restaurant)
         <tr>
-            <td>{{$restaurant->id}}</td>
+            {{-- <td>{{$restaurant->id}}</td> --}}
             <td>{{$restaurant->restName}}</td>
+            <td>{{$restaurant->restKitchen}}</td>
             <td>{{$restaurant->restLocation}}</td>
+            <td>{{$restaurant->restCity}}</td>
+            <td>{{$restaurant->restWebsite}}</td>
         </tr>
         @endforeach
     </tbody>
