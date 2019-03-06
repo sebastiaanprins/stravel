@@ -20,7 +20,7 @@
 }
 .imaaaaage {margin-top:-0.5em; padding-right: 4em;}
 .xxx {margin-top:0; padding-top:0;}
-
+.container a {text-decoration:none;}
 
 </style>
 <div class="uper">
@@ -37,6 +37,7 @@
 <div class="container">
     @foreach($restaurants as $restaurant)
 
+    <a href="http://{{$restaurant->restWebsite}}">
     <div class="row card restPlate" style="margin-top: 2em; width: 100%; height: 10em;">
       <div class="col one">
         <img class="card-img-top imaaaaage" style="height: 10em; width: auto; float:right;" src="{{ asset('else.jpg')}}" alt="Picture restaurant">
@@ -45,10 +46,10 @@
               <li style="padding-left: 2em;">{{$restaurant->restKitchen}}</li>
               <li style="padding-left: 2em;">{{$restaurant->restLocation}}</li>
               <li style="padding-left: 2em;">{{$restaurant->restCity}}</li>
-              <a href="http://{{$restaurant->restWebsite}}"><li style="padding-left: 2em;">{{$restaurant->restWebsite}}</li></a>
+              <li style="padding-left: 2em;">Click to visit the website</li>
           </p>
       </div>
-    </div>
+    </div></a>
     @endforeach
 
   </div>
