@@ -16,20 +16,21 @@
   <table class="table table-striped">
       <a href="/"> <button type="button" class="btn btn-secondary">Home</button></a>
       <a href="/countries"> <button type="button" class="btn btn-secondary">Countries</button></a>
-    <thead>
-        <tr>
-          <td>ID:</td>
-          <td>Country Name:</td>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach($countries as $country)
-        <tr>
-            <td>{{$country->id}}</td>
-            <td>{{$country->countryName}}</td>
-        </tr>
-        @endforeach
-    </tbody>
   </table>
+
+  <form method="POST" action="{{ route('country.create') }}">
+
+    <div class="form-group">
+    @csrf
+        <label for="name">Country Name:</label>
+        <input type="text" class="form-control" name="countryName"/>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add</button>
+
+  </form>
+
+
+
 </div>
 @endsection

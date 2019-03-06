@@ -88,6 +88,9 @@
                     <a href="/countries">Countries</a>
                     <a href="/languages">Languages</a>
                     <a href="https://laravel.com/docs">Laravel Documentation</a>
+                    <br /><br />
+                    <a href="/restaurants"> <button type="button" class="btn btn-secondary">Magic Dinner Places</button></a>
+                    
 
                     {{-- <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>

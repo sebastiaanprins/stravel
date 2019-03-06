@@ -15,18 +15,19 @@
 
   <table class="table table-striped">
       <a href="/"> <button type="button" class="btn btn-secondary">Home</button></a>
-      <a href="/countries/create"> <button type="button" class="btn btn-secondary">Add country</button></a>
     <thead>
         <tr>
-          <td>ID:</td>
-          <td>Country Name:</td>
+          <td>ID</td>
+          <td>Restaurant</td>
+          <td>Place</td>
         </tr>
     </thead>
     <tbody>
-        @foreach($countries as $country)
+        @foreach($restaurants as $restaurant)
         <tr>
-            <td>{{$country->id}}</td>
-            <td>{{$country->countryName}}</td>
+            <td>{{$restaurant->id}}</td>
+            <td>{{$restaurant->restName}}</td>
+            <td>{{$restaurant->restLocation}}</td>
         </tr>
         @endforeach
     </tbody>

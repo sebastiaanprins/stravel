@@ -21,5 +21,8 @@ Route::resource('countries', 'CountryController');
 // route for view & db querying
 Route::resource('languages', 'LanguageController');
 
+Route::resource('restaurants', 'RestaurantController');
+
+
 // Route to CountryController.php
 Route::get('country/create', 'CountryController@create')->name('country.create');

@@ -26,6 +26,8 @@ class CountryController extends Controller
      */
     public function create(Request $request)
     {
+
+    // Automatic fill-in:
         // Create country & assign language
         $country = new Country;
         $country->countryName = 'Canada';
@@ -36,6 +38,7 @@ class CountryController extends Controller
         $country->languages()->attach($language);
 
         return 'Success';
+        // return view('country.create');
 
     }
 
@@ -48,6 +51,34 @@ class CountryController extends Controller
     public function store(Request $request)
     {
         //
+        // Create country & assign language
+
+        // $request->validate([
+        //     'countryName'=>'required'
+        //      ]);
+
+        // $country = new Country([
+            
+// GET THE POST INFO FROM FORM >>
+        //     'countryName' => $request->get()
+
+
+
+        // ]);
+
+    // Automatic fill-in:
+        // Create country & assign language
+        // $country = new Country;
+        // $country->countryName = 'Canada';
+
+        // $country->save();
+
+        // $language = Language::find([1, 2]);
+        // $country->languages()->attach($language);
+
+        // return 'Success';
+        // return view('country.create');
+    // END auto-fill
     }
 
     /**
