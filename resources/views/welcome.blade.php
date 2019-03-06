@@ -4,6 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        {{-- Bootstrap integration --}}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
         <title>sTravel</title>
 
         <!-- Fonts -->
@@ -89,8 +92,7 @@
                     <a href="/languages">Languages</a>
                     <a href="https://laravel.com/docs">Laravel Documentation</a>
                     <br /><br />
-                    <a href="/restaurants"> <button type="button" class="btn btn-secondary">Magic Dinner Places</button></a>
-                    
+                    <a href="/restaurants"> <button type="button" class="btn btn-secondary" style="font-size: 2em"><b>Magic Dinner Places</b></button></a>
 
                     {{-- <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
@@ -99,6 +101,7 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a> --}}
                 </div>
+
             </div>
         </div>
     </body>
