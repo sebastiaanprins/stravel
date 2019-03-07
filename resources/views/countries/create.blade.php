@@ -18,12 +18,12 @@
       <a href="/countries"> <button type="button" class="btn btn-secondary">Countries</button></a>
   </table>
 
-  <form method="POST" action="{{ route('country.create') }}">
+  <form method="POST" action="{{ route('countries.store') }}">
 
     <div class="form-group">
     @csrf
         <label for="name">Country Name:</label>
-        <input type="text" class="form-control" name="countryName"/>
+        <input type="text" class="form-control" name="countryName" required>
     </div>
 
     <button type="submit" class="btn btn-primary">Add</button>

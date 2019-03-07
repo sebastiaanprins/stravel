@@ -37,7 +37,7 @@
 <div class="container">
     @foreach($restaurants as $restaurant)
 
-    <a href="http://{{$restaurant->restWebsite}}">
+    <a href="http://{{$restaurant->restWebsite}}" target="_blank">
     <div class="row card restPlate" style="margin-top: 2em; width: 100%; height: 10em;">
       <div class="col one">
         <img class="card-img-top imaaaaage" style="height: 10em; width: auto; float:right;" src="{{ asset('else.jpg')}}" alt="Picture restaurant">

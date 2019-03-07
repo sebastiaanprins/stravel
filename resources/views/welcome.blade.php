@@ -90,7 +90,7 @@
                 <div class="links">
                     <a href="/countries">Countries</a>
                     <a href="/languages">Languages</a>
-                    <a href="https://laravel.com/docs">Laravel Documentation</a>
+                    {{-- <a href="https://laravel.com/docs">Laravel Documentation</a> --}}
                     <br /><br />
                     <a href="/restaurants"> <button type="button" class="btn btn-secondary" style="font-size: 2em"><b>Magic Dinner Places</b></button></a>
 
