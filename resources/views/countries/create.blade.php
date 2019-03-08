@@ -32,7 +32,7 @@
 {{-- ADD REQUIRED F-END: <input type="text" class="form-control" name="countryName" required>
  --}}
         <label for="name">Country Name:</label>
-    <input type="text" class="form-control {{ $errors->has('countryName') ? 'alert-danger' : '' }}" name="countryName" value="{{ old('countryName') }}">
+    <input type="text" class="form-control {{ $errors->has('countryName') ? 'alert-danger' : '' }}" name="countryName" required value="{{ old('countryName') }}">
     </div>
 
     <button type="submit" class="btn btn-primary">Add</button>
