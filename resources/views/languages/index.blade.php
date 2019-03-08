@@ -15,6 +15,7 @@
 
   <table class="table table-striped">
       <a href="/"> <button type="button" class="btn btn-secondary">Home</button></a>
+      <br /><br />
     <thead>
         <tr>
           <td>ID:</td>

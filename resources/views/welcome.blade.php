@@ -14,8 +14,9 @@
 
         <!-- Styles -->
         <style>
+
             html, body {
-                background-color: #fff;
+                background-color: #d8d0d0;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -48,13 +49,13 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 130px;
             }
 
-            .links > a {
+            .links > a,.customlink {
                 color: #636b6f;
                 padding: 0 25px;
-                font-size: 13px;
+                font-size: 16px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
@@ -62,7 +63,7 @@
             }
 
             .m-b-md {
-                margin-bottom: 30px;
+                margin-bottom: 40px;
             }
         </style>
     </head>
@@ -88,9 +89,8 @@
                 </div>
 
                 <div class="links">
-                    <a href="/countries">Countries</a>
-                    <a href="/languages">Languages</a>
-                    {{-- <a href="https://laravel.com/docs">Laravel Documentation</a> --}}
+                    <a href="/countries"><button type="button" class="btn customlink">Countries</button></a>
+                    <a href="/languages"><button type="button" class="btn customlink">Languages</button></a>
                     <br /><br />
                     <a href="/restaurants"> <button type="button" class="btn btn-secondary" style="font-size: 2em"><b>Magic Dinner Places</b></button></a>
 

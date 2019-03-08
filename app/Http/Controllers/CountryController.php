@@ -16,6 +16,7 @@ class CountryController extends Controller
     public function index()
     {
         $countries = Country::all();
+
         return view('countries.index', compact('countries'));
     }
 
@@ -26,6 +27,7 @@ class CountryController extends Controller
      */
     public function create(Request $request)
     {
+        return view('countries.create');
 
     // Automatic fill-in:
         // Create country & assign language
@@ -42,10 +44,6 @@ class CountryController extends Controller
 
         // go to create blade /form
         //was: return view('countries.index', compact('countries'));
-
-        return view('countries.create');
-
-
     }
 
     /**
@@ -54,53 +52,23 @@ class CountryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        $request->validate([
-            'countryName' => ['required', 'string']
+        request()->validate([
+            'countryName' => ['required', 'min:3', 'max:30']
         ]);
 
-        // $request->validate([
-        //     'name' => ['required', 'string', new Uppercase],
-        // ]);
-        
-        $country = new Country([
-            'countryName' => $request->get('countryName')
-        ]);
+        Country::create(request(['countryName']));
 
-        $country->save();
-        return redirect('/countries')->with('Success', 'Youve created a new country');
-        
-
-        // return view('countries.index', compact('countries'));
-
-
-        //
-        // Create country & assign language
-
-        // $request->validate([
-        //     'countryName'=>'required'
-        //      ]);
-
+    // IS SIMILAR TO:
         // $country = new Country([
-            
-// GET THE POST INFO FROM FORM >>
-        //     'countryName' => $request->get()
+        //     'countryName' => $request->get('countryName')
         // ]);
-
-    // Automatic fill-in:
-        // Create country & assign language
-        // $country = new Country;
-        // $country->countryName = 'Canada';
 
         // $country->save();
+    // END COMMENT
 
-        // $language = Language::find([1, 2]);
-        // $country->languages()->attach($language);
-
-        // return 'Success';
-        // return view('country.create');
-    // END auto-fill
+        return redirect('/countries');
     }
 
     /**
