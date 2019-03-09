@@ -114,5 +114,10 @@ class CountryController extends Controller
     public function destroy(Country $country)
     {
         //
+
+        $country = Country::find($country->id);
+        $country->delete();
+        return redirect('/countries');
+
     }
 }

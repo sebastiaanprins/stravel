@@ -28,7 +28,15 @@
         <tr>
             <td>{{$country->id}}</td>
             <td>{{$country->countryName}}</td>
+            <td>
+                <form action="{{ route('countries.destroy', $country->id)}}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <button class="btn btn-danger" type="submit">Delete</button>
+                  </form>
+            </td>
         </tr>
+        
         @endforeach
     </tbody>
   </table>
