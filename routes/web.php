@@ -26,5 +26,8 @@ Route::resource('restaurants', 'RestaurantController');
 // Route to CountryController.php
 // Route::get('country/create', 'CountryController@create')->name('country.create');
 
+Route::delete('/countries','CountryController@destroy');
 
-Route::delete('/counrties','CountryController@destroy');
+//API
+Route::get('/api', 'ApiController@index');
+

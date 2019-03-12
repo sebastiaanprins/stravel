@@ -16,4 +16,5 @@ class Country extends Model
         return $this->belongsToMany(Language::class);
         // 'App\Language'
     }
+
 }
